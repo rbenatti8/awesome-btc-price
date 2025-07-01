@@ -124,7 +124,7 @@ func TestHandler_Handle(t *testing.T) {
 
 			db := test.db(ctrl)
 			hub := NewHub()
-			go hub.Run(ctx)
+			hub.Run(ctx)
 
 			h := NewHandler(db, hub)
 

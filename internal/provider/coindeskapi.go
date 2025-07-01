@@ -30,7 +30,7 @@ func NewCoinDesk(httpClient *resty.Client) *CoinDesk {
 	}
 }
 
-func (c *CoinDesk) GetBTCPrice(ctx context.Context) (BTCPrice, error) {
+func (c *CoinDesk) GetPrice(ctx context.Context) (BTCPrice, error) {
 	url := "/data/price?fsym=BTC&tsyms=USD"
 	res, err := c.httpClient.R().SetContext(ctx).Get(url)
 	if err != nil {

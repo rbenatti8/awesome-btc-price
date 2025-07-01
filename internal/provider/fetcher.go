@@ -41,7 +41,7 @@ func NewFetcher(store database, api btcPriceProvider, bd broadcaster) *BTCPriceF
 
 // Start begins the periodic polling of BTC prices at the specified interval until the context is canceled.
 func (f *BTCPriceFetcher) Start(ctx context.Context, interval time.Duration) {
-	go f.poll(ctx, interval)
+	f.poll(ctx, interval)
 }
 
 func (f *BTCPriceFetcher) poll(ctx context.Context, interval time.Duration) {

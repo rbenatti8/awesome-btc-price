@@ -42,7 +42,7 @@ func TestBTCPriceFetcher_Start(t *testing.T) {
 	bd.EXPECT().Broadcast(b).MinTimes(1)
 
 	f := NewFetcher(store, api, bd)
-	f.Start(ctx, 100*time.Millisecond)
+	go f.Start(ctx, 100*time.Millisecond)
 
 	time.Sleep(300 * time.Millisecond)
 }
