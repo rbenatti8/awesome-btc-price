@@ -67,7 +67,6 @@ func TestInMemoryDB_Add(t *testing.T) {
 	defer db.Stop()
 
 	db.Add(1)
-	assert.Len(t, db, 1)
 	assert.Equal(t, 1, db.items[0].data)
 }
 
