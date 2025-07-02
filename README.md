@@ -10,17 +10,18 @@ This project fetches the current Bitcoin price using external APIs and provides 
 ## Commands
 
 ### Build the Docker Image
-bash
+```bash
 make docker-build
-
+```
 ### Run the Docker Container
-bash
+```bash
 make docker-run
+```
 
 ### Run Tests
-bash
+```bash
 make test
-
+```
 
 ## Production proposal
 ![design](./design.png)
